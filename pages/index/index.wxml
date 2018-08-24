@@ -1,0 +1,22 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="inputContainer">
+   <input class="input" placeholder="用户名" auto-focus/>
+  </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto.text}}</text>
+    <button type="primary" bindtap="onTap">按钮文本</button>
+  </view>
+  <!-- 不能有空格 -->
+  <view wx:for="{{[1,2,3]}} " wx:for-index="index" wx:key="index">{{item}}</view>
+  <component-tag-name num="{{num}}" bind:componentEvent='pageEvent' inner="Some text"></component-tag-name>
+</view>

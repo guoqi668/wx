@@ -1,0 +1,5 @@
+<view>
+    <view class='top'>
+        <text class="iconfont  iconfont-31gouwuche" style='color:#7F8389;font-size:60rpx;'></text>
+    </view>
+</view>

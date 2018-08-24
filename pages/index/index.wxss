@@ -1,0 +1,27 @@
+/* @import "../../assets/css/common.wxss"; */
+
+.input {
+  border: 1px solid #ccc;
+  height: 50px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+
+.usermotto {
+  margin-top: 200px;
+} */
