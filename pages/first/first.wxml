@@ -1,5 +1,76 @@
-<view>
-    <view class='top'>
-        <text class="iconfont  iconfont-31gouwuche" style='color:#7F8389;font-size:60rpx;'></text>
+<view class="container">
+    <!-- 顶部搜索 -->
+    <view class="header table  {{hasScroll?'header-active':'header-inactive'}}">
+        <text class="iconfont iconfont-liebiao2 table-cell header-left" style='font-size:60rpx;'></text>
+        <view class="table-cell">
+            <view class="table header-input">
+                    <i class="iconfont iconfont-sousuo table-cell" style='font-size:36rpx;'></i>
+                    <input  placeholder-class="placeholder" placeholder="搜索菜品" />   
+            </view>
+        </view>
+        <text class="table-cell header-right">{{personNum}}人</text>
     </view>
+    
+    <view style="display: flex;padding-top:100rpx;">
+        <!-- 侧边栏 -->
+        <scroll-view scroll-y="true" scroll-into-view="{{contentActive}}" class="sidebar" >
+            <view class="sidebar-item {{index==sideBarActive?'active':''}}" 
+                wx:for="{{sideBarList}}" wx:for-index="index"  wx:key="{{index}}"
+                data-id="tt{{item.id}}" data-index="{{index}}" bindtap="chooseType"
+            >
+                <text >{{item.category}}</text>
+            </view>
+        </scroll-view>
+
+        <!-- 侧边栏右侧 -->
+        <scroll-view scroll-y="true" bindscroll="onScroll" 
+            scroll-into-view="{{contentActive}}" class="sidebar-right"
+        >
+
+            <!-- 显示更多部分 -->
+             <!--<view class="showMore-container {{showMore?'showMoreFull':''}}"  bindtap="showMore">
+                <view class="table showMore">
+                    <view class="table-cell"  animation="{{animationData_notice}}" style="vertical-align: top;width: 60rpx;">
+                        <text class=" showMore-left">券</text>
+                    </view>
+                    <view class="table-cell">
+                    <view style="showMore-desc"  animation="{{animationData_notice}}">
+                            <text class="color-orange" >门店优惠5-01:14:34</text>
+                        </view>
+                        <view class="showMore-desc">测试测试测试</view>
+                    </view>
+                
+                    <view class="table-cell showMore-right">
+                        <text>查看更多</text>
+                        <text wx:if="{{!showMore}}" class="iconfont iconfont-fanhui4"></text>
+                        <text wx:if="{{showMore}}" class="iconfont iconfont-fanhui3"></text>
+                    </view>
+
+                </view>
+
+                <view class="table showMore">
+                    <view class="table-cell" style="vertical-align: top;width: 60rpx;"  animation="{{animationData_notice1}}">
+                        <text class=" showMore-left">告</text>
+                    </view>
+                    <view class="table-cell">
+                    <view style="showMore-desc" animation="{{animationData_notice1}}">
+                            <text class="color-orange" >门店优惠5-01:14:34</text>
+                        </view>
+                        <view class="showMore-desc">测试测试测试</view>
+                    </view>
+                </view>
+            </view> -->
+            <view class="content">
+                 <view class="contentItem" id="tt{{item.id}}" wx:for="{{contentList}}" wx:for-index="index" 
+                    wx:key="{{index}}"
+                    style="height: 1500px;">
+                        <text>{{item.name}}</text>
+                </view>
+                <view style="height: 1500px;">
+                    dhfite
+                </view>
+            </view>
+           
+        </scroll-view>
+    </view>   
 </view>

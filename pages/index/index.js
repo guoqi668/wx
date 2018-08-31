@@ -78,7 +78,7 @@ Page({
     })
   },
    onTap:  function() {
-    const a = request('/login',{UserName: 'gq',PassWord: '123'}).then((res)=>{
+    const a = request.get('/test',{UserName: 'gq',PassWord: '123'}).then((res)=>{
       console.log(res)
     });
    

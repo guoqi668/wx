@@ -1,1 +1,112 @@
 /* pages/first.wxss */
+.header-active {
+    background-color: #fefefe;
+    border-bottom: 1px solid #eee;
+    color: #fff;
+}
+.header-active .placeholder {
+    color: #ccc;
+}
+.header-active .header-input {
+    border: 1px solid #ccc;
+}
+.header-inactive {
+    background-color: #333;
+    color: rgba(255,255,255,0.6);    
+}
+.header {
+    height: 100rpx;
+    font-size: 28rpx; 
+    position: fixed;
+    z-index: 10;
+} 
+.header-left,.header-right {
+    width: 100rpx;
+    text-align: center;
+}
+.header-input {
+    /* height: 60rpx; */
+    box-sizing: border-box;
+    padding: 7rpx 20rpx 7rpx;
+    border-radius: 35rpx;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+.placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* .swiper {
+    width: 100%;
+    height: 500rpx; 
+}
+swiper-item {
+    width: 100%;
+    height: 100%;
+}
+.swiper-item1,.swiper-item2,.swiper-item3 {
+    background-image: url("//com.dc78.cn/static/img/banners/1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+} */
+
+/* 显示更多 */
+
+.showMore-container {
+    overflow: hidden;
+    height: 40rpx;
+    padding: 15rpx 0;
+}
+.showMoreFull {
+    height: 100%;
+}
+.showMore {
+    padding: 0 15rpx;
+    box-sizing: border-box;
+}
+.showMore-left {
+    border: 1px solid orange;
+    padding: 0 5rpx;
+    font-size: 26rpx;
+    border-radius: 10rpx;
+    color: orange;
+}
+.showMore-desc {
+    line-height: 2.5;
+}
+.showMore-right {
+    vertical-align: top;
+    width: 200rpx;
+    text-align: right;   
+}
+/* 侧边栏 */
+.sidebar {
+    /* margin-top:100px; */
+    /* display: inline-block; */
+    position: fixed;
+    top: 100rpx;
+    color: #333;
+    width: 200rpx;
+    bottom: 0;
+    text-align: center;
+    background-color: #eee;
+    border-right: 1px solid #eee;
+}
+.sidebar-right {
+    position:absolute;
+    left:200rpx;
+    top:100rpx;
+    bottom:0;
+    padding:0;
+}
+.sidebar-item {
+    line-height: 100rpx;
+    width: 200rpx;
+    border-bottom: 1px solid #eee;
+    
+}
+.sidebar-item.active {
+    color: orange;
+    background-color: #fff;
+}
